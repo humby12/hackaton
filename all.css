@@ -1,9 +1,63 @@
+@font-face{font-display:auto;font-family:"icons-ui";font-stretch:normal;font-style:normal;font-weight:400;src:local("icons-ui"),url(/_fonts/icons-ui.woff2?20231122) format("woff2"),url(/_fonts/icons-ui.woff?20231122) format("woff"),url(/_fonts/icons-ui.ttf?20231122) format("truetype"),url(/_fonts/icons-ui.svg?20231122#icons-ui) format("svg")}@font-face{font-display:swap;font-family:"DINNextLTPro-Regular";font-stretch:normal;font-style:normal;font-weight:400;src:local("DINNextLTPro-Regular"),url(/_fonts/DINNextLTPro-Regular.woff2?20231122) format("woff2"),url(/_fonts/DINNextLTPro-Regular.woff?20231122) format("woff"),url(/_fonts/DINNextLTPro-Regular.ttf?20231122) format("truetype"),url(/_fonts/DINNextLTPro-Regular.svg?20231122#DINNextLTPro-Regular) format("svg")}@font-face{font-display:swap;font-family:"DINNextLTPro-Bold";font-stretch:normal;font-style:normal;font-weight:400;src:local("DINNextLTPro-Bold"),url(/_fonts/DINNextLTPro-Bold.woff2?20231122) format("woff2"),url(/_fonts/DINNextLTPro-Bold.woff?20231122) format("woff"),url(/_fonts/DINNextLTPro-Bold.ttf?20231122) format("truetype"),url(/_fonts/DINNextLTPro-Bold.svg?20231122#DINNextLTPro-Bold) format("svg")}@font-face{font-display:swap;font-family:"DINNextLTPro-Heavy";font-stretch:normal;font-style:normal;font-weight:400;src:local("DINNextLTPro-Heavy"),url(/_fonts/DINNextLTPro-Heavy.woff2?20231122) format("woff2"),url(/_fonts/DINNextLTPro-Heavy.woff?20231122) format("woff"),url(/_fonts/DINNextLTPro-Heavy.ttf?20231122) format("truetype"),url(/_fonts/DINNextLTPro-Heavy.svg?20231122#DINNextLTPro-Heavy) format("svg")}@font-face{font-display:swap;font-family:"DINNextLTPro-MediumCond";font-stretch:normal;font-style:normal;font-weight:400;src:local("DINNextLTPro-MediumCond"),url(/_fonts/DINNextLTPro-MediumCond.woff2?20231122) format("woff2"),url(/_fonts/DINNextLTPro-MediumCond.woff?20231122) format("woff"),url(/_fonts/DINNextLTPro-MediumCond.ttf?20231122) format("truetype"),url(/_fonts/DINNextLTPro-MediumCond.svg?20231122#DINNextLTPro-MediumCond) format("svg")}@font-face{font-display:auto;font-family:"LEQUIPE-Regular";font-stretch:normal;font-style:normal;font-weight:400;src:local("LEQUIPE-Regular"),url(/_fonts/LEQUIPE-Regular.woff2?20231122) format("woff2"),url(/_fonts/LEQUIPE-Regular.woff?20231122) format("woff"),url(/_fonts/LEQUIPE-Regular.ttf?20231122) format("truetype"),url(/_fonts/LEQUIPE-Regular.svg?20231122#LEQUIPE-Regular) format("svg")}
+
 .hidden {
     display: none;
 }
 
-img#illustration {
-    margin: 1em;
-    max-height: 60vh;
-    max-width: 40vw;
+
+
+body {background: #f8f8f8;
+      color: #1d1d1b;
+      min-width: 320px;
+}
+.container {
+  max-width: 640px;
+  display: inline-block;
+  padding: 16px;
+}
+
+h1 {font-family: "DINNextLTPro-Bold",sans-serif; padding: 0;}
+.difficulty {padding: 0 0 20px 0}
+button {
+      background: #fff;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      color: #7b7b7a;
+      border-radius : 15px;
+      display: inline-block;
+      font-family: "DINNextLTPro-Regular",sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      height: 32px;
+      line-height: 33px;
+      padding: 0 16px;
+      position: relative;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+}
+.row div.col:first-child {
+  position : relative; 
+  max-width : calc(100%);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.row div.col:first-child button {
+  position : absolute; 
+  bottom : 40px;
+  left: calc(50% - 95px);
+  background : #000;
+  color: #fff;
+}
+
+.row div.col:first-child img {
+   max-width: calc(100% - 16px);
+}
+
+.row div.col:last-child button {
+  width: calc(100% - 10px);
 }
