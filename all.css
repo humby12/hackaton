@@ -1,3 +1,9 @@
 .hidden {
     display: none;
 }
+
+img#illustration {
+    margin: 1em;
+    max-height: 60vh;
+    max-width: 40vw;
+}

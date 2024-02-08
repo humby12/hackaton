@@ -46,7 +46,7 @@ const getRandomSportif = (level) => {
 
 
 const openai = new OpenAI({
-    apiKey: ''
+    apiKey: '',
 });
 
 

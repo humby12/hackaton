@@ -17,12 +17,19 @@ let currentQuizz = {
     hints: [],
     solution: '',
 };
+let currentBlur = 50;
+
+const setBlur = (blur) => {
+    illustration.style.filter = `blur(${blur}px)`;
+};
 
 const revealHint = () => {
     ++hintCount;
 
     if (hintCount >= currentQuizz.hints.length) {
         btnSolution.classList.remove('hidden');
+    } else {
+        setBlur(currentBlur -= 5);
     }
 
     document.querySelector(`ul > li:nth-child(${hintCount})`)?.classList.remove('hidden');
@@ -32,6 +39,7 @@ btnHint.addEventListener('click', () => revealHint());
 btnSolution.addEventListener('click', () => {
     solutionWrapper.classList.remove('hidden');
     btnSolution.classList.add('hidden');
+    setBlur(0);
 });
 
 const run = async (level) => {
@@ -73,9 +81,8 @@ const run = async (level) => {
         solutionName.textContent = solution;
         solutionDesc.textContent = wikipediaSummary.extract;
 
-        const { originalImage } = wikipediaSummary;
-
-        illustration.setAttribute('src', originalImage.source);
+        setBlur(50);
+        illustration.setAttribute('src', wikipediaSummary.originalimage.source);
 
         revealHint();
 
